@@ -1,0 +1,10 @@
+deb http://http.debian.net/debian/ squeeze main
+deb-src http://http.debian.net/debian/ squeeze main
+deb http://security.debian.org/ squeeze/updates main
+deb-src http://security.debian.org/ squeeze/updates 
+deb http://http.debian.net/debian/ squeeze-updates main
+deb-src http://http.debian.net/debian/ squeeze-updates main
+deb http://packages.dotdeb.org squeeze all
+deb-src http://packages.dotdeb.org squeeze all
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib

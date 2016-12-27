@@ -1,0 +1,14 @@
+deb http://kambing.ui.ac.id/debian/ wheezy main
+deb-src http://kambing.ui.ac.id/debian/ wheezy main
+deb http://kambing.ui.ac.id/debian/ wheezy-updates main
+deb-src http://kambing.ui.ac.id/debian/ wheezy-updates main
+deb http://kambing.ui.ac.id/debian-security/ wheezy/updates main contrib non-free
+deb-src http://kambing.ui.ac.id/debian-security/ wheezy/updates main contrib non-free
+deb http://kambing.ui.ac.id/dotdeb/ wheezy all
+deb-src http://kambing.ui.ac.id/dotdeb/ wheezy all
+deb http://kambing.ui.ac.id/dotdeb/ wheezy-php55 all
+deb-src http://kambing.ui.ac.id/dotdeb/ wheezy-php55 all
+deb http://mariadb.biz.net.id//repo/5.5/debian wheezy main
+deb-src http://mariadb.biz.net.id//repo/5.5/debian wheezy main
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib

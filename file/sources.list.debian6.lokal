@@ -1,0 +1,14 @@
+deb http://kambing.ui.ac.id/debian/ squeeze main
+deb-src http://kambing.ui.ac.id/debian/ squeeze main
+deb http://kambing.ui.ac.id/debian/ squeeze-updates main
+deb-src http://kambing.ui.ac.id/debian/ squeeze-updates main
+deb http://kambing.ui.ac.id/debian-security/ squeeze/updates main contrib non-free
+deb-src http://kambing.ui.ac.id/debian-security/ squeeze/updates main contrib non-free
+deb http://kambing.ui.ac.id/dotdeb/ squeeze all
+deb-src http://kambing.ui.ac.id/dotdeb/ squeeze all
+deb http://kambing.ui.ac.id/dotdeb/ squeeze-php55 all
+deb-src http://kambing.ui.ac.id/dotdeb/ squeeze-php55 all
+deb http://mariadb.biz.net.id//repo/5.5/debian squeeze main
+deb-src http://mariadb.biz.net.id//repo/5.5/debian squeeze main
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib

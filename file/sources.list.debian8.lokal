@@ -1,0 +1,14 @@
+deb http://kambing.ui.ac.id/debian/ jessie main
+deb-src http://kambing.ui.ac.id/debian/ jessie main
+deb http://kambing.ui.ac.id/debian/ jessie-updates main
+deb-src http://kambing.ui.ac.id/debian/ jessie-updates main
+deb http://kambing.ui.ac.id/debian-security/ jessie/updates main contrib non-free
+deb-src http://kambing.ui.ac.id/debian-security/ jessie/updates main contrib non-free
+deb http://kambing.ui.ac.id/dotdeb/ jessie all
+deb-src http://kambing.ui.ac.id/dotdeb/ jessie all
+deb http://kambing.ui.ac.id/dotdeb/ jessie-php55 all
+deb-src http://kambing.ui.ac.id/dotdeb/ jessie-php55 all
+deb http://mariadb.biz.net.id//repo/5.5/debian jessie main
+deb-src http://mariadb.biz.net.id//repo/5.5/debian jessie main
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
