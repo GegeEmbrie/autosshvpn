@@ -1,0 +1,19 @@
+#!/bin/bash
+clear
+useradd $1 -g users -s /bin/false
+usermod -e `date -d "30 days" +"%Y-%m-%d"` $1
+echo "$1:$2" | chpasswd
+echo "===================================================="
+echo "                     User Details                   "
+echo "===================================================="
+ip=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+if [[ "$ip" = "" ]]; then
+		ip=$(wget -qO- autoscript.kepalatupai.com/addons/ip.php)
+fi
+exp="$(chage -l $1 | grep "Account expires" | awk -F": " '{print $2}')"
+echo "Host     :" $ip
+echo "Username :" $1
+echo "Password :" $2
+echo "Expired  :" $exp
+echo "OpenVPN  : http://$ip:81/VPN-Client.zip"
+echo "===================================================="

@@ -1,0 +1,16 @@
+#!/bin/bash
+clear
+echo "$1	*	$2	*"/etc/ppp/chap-secrets
+exp=`date -d "30 days" +"%d-%m-%Y"`
+echo "===================================================="
+echo "                  User PPTP Details                 "
+echo "===================================================="
+ip=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+if [[ "$ip" = "" ]]; then
+		ip=$(wget -qO- autoscript.kepalatupai.com/addons/ip.php)
+fi
+echo "Host     :" $ip
+echo "Username :" $1
+echo "Password :" $2
+echo "Expired  :" $exp
+echo "===================================================="

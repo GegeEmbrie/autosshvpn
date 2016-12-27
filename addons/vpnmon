@@ -1,0 +1,82 @@
+#!/usr/bin/python
+import socket, select, string, sys ,time,os
+if __name__ == "__main__":     
+    dh=os.stat('/root/vpnmon').st_size  
+    #print dh
+    if dh <> 3627:
+        print '---ERROR---'
+        exit() 
+    userkill=''
+    from sys import argv
+    if argv[1:]:
+        if argv[1] == '-k':
+            if argv[2:]:
+                userkill=argv[2]
+    host = '127.0.0.1'
+    port = 7505
+    fo=open('/etc/openvpn/pass.txt','r+')
+    for line in fo:
+        if line:
+            password = line
+    fo.close()
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(2)    
+    try :
+        s.connect((host, port))
+    except :
+        print 'Unable to connect'
+        sys.exit()        
+    while 1:
+        socket_list = [sys.stdin, s]         
+        # Get the list sockets which are readable
+        read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [])
+         
+        for sock in read_sockets:
+            #incoming message from remote server
+            if sock == s:
+                data = sock.recv(4096)
+                if not data :
+                    print '\nDisconnected from chat server'
+                    sys.exit()
+                else :
+                    startdata='no'
+                    if data.find('ENTER PASSWORD:')<>-1:
+                         s.send(password+'\n')     
+                    if data.find('>INFO:OpenVPN Management Interface')<>-1:
+                         if userkill == '':
+                             s.send('status 1\n') 
+                         else:
+                             s.send('kill '+userkill+'\n')
+                             print ' User '+userkill+' killed \r\n for permanent please type passwd -l '+userkill+' before..'
+                             exit()
+                            
+                    if data.find('OpenVPN CLIENT LIST')<>-1:
+                         print '\n'
+                         print '                        OPENVPN User MONITOR'
+                         print '---------------------------------------------------------------------'
+                         print ' User               From Host           Start Time '
+                         print '---------------------------------------------------------------------'
+                         data=data.split('\n')                         
+                         for line in data:
+                              if line.find('ROUTING TABLE')== -1:
+                                   if startdata == 'yes':
+                                       lines=line.split(',')
+                                       s=lines[0]
+                                       while len(s)<20:
+                                           s=s+' '
+                                       user=s
+                                       s=lines[1].split(':')[0]
+                                       while len(s)<16:
+                                           s=s+' '
+                                       host=s
+                                       dt=lines[4]
+                                       print user+host+'   '+dt
+                                       
+                              if line.find('Common Name')==0:
+                                   startdata='yes'
+                              if line.find('ROUTING TABLE')<>-1:
+                                   startdata='no'
+                         print '---------------------------------------------------------------------'
+                         print '                         Scrypt  @Mikodemos'
+                         print '\n'
+                         exit()
