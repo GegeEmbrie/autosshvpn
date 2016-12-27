@@ -23,7 +23,7 @@ chmod 777 /etc/issue.net
 
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 rm -rf /etc/default/dropbear
-curl -s http://autoscript.kepalatupai.com/file/dropbear >> /etc/default/dropbear
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dropbear >> /etc/default/dropbear
 chmod 644 /etc/default/dropbear
 
 service ssh restart

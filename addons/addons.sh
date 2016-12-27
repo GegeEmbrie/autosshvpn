@@ -17,19 +17,19 @@ elif [ $OSystem = 'centos' ]; then
 	yum install python -y
 fi
 
-curl -s http://autoscript.kepalatupai.com/addons/akun > /usr/bin/akun
-curl -s http://autoscript.kepalatupai.com/addons/lmtdb > /usr/bin/lmtdb
-curl -s http://autoscript.kepalatupai.com/addons/lmtop > /usr/bin/lmtop
-curl -s http://autoscript.kepalatupai.com/addons/login > /usr/bin/login
-curl -s http://autoscript.kepalatupai.com/addons/tambah > /usr/bin/tambah
-curl -s http://autoscript.kepalatupai.com/addons/addpptp > /usr/bin/addpptp
-curl -s http://autoscript.kepalatupai.com/addons/renew > /usr/bin/renew
-curl -s http://autoscript.kepalatupai.com/addons/expired.sh > /root/expired.sh
-curl -s http://autoscript.kepalatupai.com/addons/lmt.sh > /root/lmt.sh
-curl -s http://autoscript.kepalatupai.com/addons/login.sh > /root/login.sh
-curl -s http://autoscript.kepalatupai.com/addons/addpptp.sh > /root/addpptp.sh
-curl -s http://autoscript.kepalatupai.com/addons/cron.sh > /usr/bin/cron.sh
-wget http://autoscript.kepalatupai.com/addons/speedtest_cli.py
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/akun > /usr/bin/akun
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/lmtdb > /usr/bin/lmtdb
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/lmtop > /usr/bin/lmtop
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/login > /usr/bin/login
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/tambah > /usr/bin/tambah
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/addpptp > /usr/bin/addpptp
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/renew > /usr/bin/renew
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/expired.sh > /root/expired.sh
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/lmt.sh > /root/lmt.sh
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/login.sh > /root/login.sh
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/addpptp.sh > /root/addpptp.sh
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/cron.sh > /usr/bin/cron.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/speedtest_cli.py
 chmod +x /root/expired.sh
 chmod +x /root/lmt.sh
 chmod +x /root/login.sh
