@@ -96,10 +96,10 @@ rm -rf openvpn-auth-pam.zip
 mv openvpn-auth-pam.so /etc/openvpn/openvpn-auth-pam.so
 
 cd /etc/openvpn
-curl -s http://autoscript.kepalatupai.com/file/server-tcp.conf >> /etc/openvpn/server-tcp.conf
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/server-tcp.conf >> /etc/openvpn/server-tcp.conf
 sed -i $ip /etc/openvpn/server-tcp.conf;
 sed -i $PORT1 /etc/openvpn/server-tcp.conf;
-curl -s http://autoscript.kepalatupai.com/file/server-udp.conf >> /etc/openvpn/server-udp.conf
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/server-udp.conf >> /etc/openvpn/server-udp.conf
 sed -i $ip /etc/openvpn/server-udp.conf;
 sed -i $PORT2 /etc/openvpn/server-udp.conf;
 service openvpn restart

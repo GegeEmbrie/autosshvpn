@@ -14,7 +14,7 @@ apt-get install xfonts-base -y
 apt-get install tightvncserver -y
 tightvncserver :1
 tightvncserver -kill :1
-wget -O ~/.vnc/xstartup "http://autoscript.kepalatupai.com/file/xstartup"
+wget -O ~/.vnc/xstartup "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/xstartup"
 tightvncserver -geometry 1024x768 :1
 
 # info

@@ -22,13 +22,13 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 if [ $OSystem = 'debian' ]; then
 	apt-get -y update
 	apt-get -y install squid3
-	wget -O /etc/squid3/squid.conf "http://autoscript.kepalatupai.com/file/squid3.conf"
+	wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/squid3.conf"
 	sed -i $MYIP2 /etc/squid3/squid.conf;
 	service squid3 restart
 	rm squid.sh
 elif [ $OSystem = 'centos' ]; then
 	yum -y install squid
-	wget -O /etc/squid/squid.conf "http://autoscript.kepalatupai.com/file/squid3.conf"
+	wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/squid3.conf"
 	sed -i $MYIP2 /etc/squid/squid.conf;
 	service squid restart
 	chkconfig squid on

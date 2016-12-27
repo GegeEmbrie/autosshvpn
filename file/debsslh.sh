@@ -14,7 +14,7 @@ make install
 
 cd /etc/default
 rm -rf /etc/default/sslh
-curl http://autoscript.kepalatupai.com/file/debsslh > /etc/default/sslh
+curl https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/debsslh > /etc/default/sslh
 chmod 644 /etc/default/sslh
 
 service sslh restart

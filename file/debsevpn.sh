@@ -19,7 +19,7 @@ cd /usr/local/vpnserver/
 chmod 600 *
 chmod 700 vpncmd
 chmod 700 vpnserver
-curl -s http://autoscript.kepalatupai.com/file/vpnserver1 > /etc/init.d/vpnserver
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vpnserver1 > /etc/init.d/vpnserver
 chmod 755 /etc/init.d/vpnserver
 mkdir /var/lock/subsys
 update-rc.d vpnserver defaults

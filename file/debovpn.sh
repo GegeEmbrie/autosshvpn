@@ -76,15 +76,15 @@ echo -e "\n\n\n\n\n\n\n" | ./build-ca
 openvpn --genkey --secret keys/ta.key
 
 cd /etc/openvpn
-curl -s http://autoscript.kepalatupai.com/file/server-tcp1.conf >> /etc/openvpn/server-tcp1.conf
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/server-tcp1.conf >> /etc/openvpn/server-tcp1.conf
 sed -i $PORT1 /etc/openvpn/server-tcp1.conf;
-curl -s http://autoscript.kepalatupai.com/file/server-tcp2.conf >> /etc/openvpn/server-tcp2.conf
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/server-tcp2.conf >> /etc/openvpn/server-tcp2.conf
 sed -i $PORT2 /etc/openvpn/server-tcp2.conf;
 mkdir /etc/openvpn/keys
 cp /etc/openvpn/easy-rsa/2.0/keys/{ca.crt,server01.crt,server01.key,dh1024.pem,ta.key} /etc/openvpn/keys/
 sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 /etc/init.d/openvpn restart
-curl -s http://autoscript.kepalatupai.com/file/forwarding.conf >> /etc/sysctl.d/forwarding.conf
+curl -s https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/forwarding.conf >> /etc/sysctl.d/forwarding.conf
 sysctl -p /etc/sysctl.d/forwarding.conf
 
 if [ $cekvirt = 'KVM' ]; then
