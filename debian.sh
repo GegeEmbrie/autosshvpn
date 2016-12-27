@@ -129,8 +129,8 @@ debver='Null'
 fi
 if [ $debver = '6' ]; then
 	if [[ "$loc" = "I" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -138,8 +138,8 @@ if [ $debver = '6' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "L" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -150,8 +150,8 @@ if [ $debver = '6' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "i" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -159,8 +159,8 @@ if [ $debver = '6' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "l" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -173,8 +173,8 @@ if [ $debver = '6' ]; then
 	fi
 elif [ $debver = '7' ]; then
 	if [[ "$loc" = "I" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -182,8 +182,8 @@ elif [ $debver = '7' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "L" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -194,8 +194,8 @@ elif [ $debver = '7' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "i" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -203,8 +203,8 @@ elif [ $debver = '7' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "l" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian7.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian7.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -217,8 +217,8 @@ elif [ $debver = '7' ]; then
 	fi
 elif [ $debver = '8' ]; then
 	if [[ "$loc" = "I" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian8"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian8"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -226,8 +226,8 @@ elif [ $debver = '8' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "L" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian8.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian8.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -238,8 +238,8 @@ elif [ $debver = '8' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "i" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian8"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian8"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 		cd /root
 		wget http://www.webmin.com/jcameron-key.asc
@@ -247,8 +247,8 @@ elif [ $debver = '8' ]; then
 		cd
 		apt-get update
 	elif [[ "$loc" = "l" ]]; then
-		wget -O /etc/apt/sources.list "http://autoscript.kepalatupai.com/file/sources.list.debian8.lokal"
-		wget "http://autoscript.kepalatupai.com/file/dotdeb.gpg"
+		wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/sources.list.debian8.lokal"
+		wget "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dotdeb.gpg"
 		apt-key add dotdeb.gpg
 		rm dotdeb.gpg
 		apt-get install python-software-properties 
@@ -286,7 +286,7 @@ service ssh restart
 
 # Install Dropbear
 apt-get install zlib1g-dev dpkg-dev dh-make -y
-wget http://autoscript.kepalatupai.com/file/dropbear-2014.63.tar.bz2
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/dropbear-2014.63.tar.bz2
 tar jxvf dropbear-2014.63.tar.bz2
 cd dropbear-2014.63
 dpkg-buildpackage
@@ -311,8 +311,8 @@ apt-get install nginx php5 libapache2-mod-php5 php5-fpm php5-cli php5-mysql php5
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.old
-curl http://autoscript.kepalatupai.com/file/nginx.conf > /etc/nginx/nginx.conf
-curl http://autoscript.kepalatupai.com/file/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/nginx.conf > /etc/nginx/nginx.conf
+curl https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -321,7 +321,7 @@ chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
 wget -O /home/vps/public_html/uptime.php "http://autoscript.kepalatupai.com/uptime.php1"
-wget -O /home/vps/public_html/index.html "http://autoscript.kepalatupai.com/addons/index.html1"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/index.html1"
 service php5-fpm restart
 service nginx restart
 cd
@@ -329,7 +329,7 @@ cd
 # Install VNSTAT
 apt-get install vnstat -y
 cd /home/vps/public_html/
-wget http://autoscript.kepalatupai.com/file/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -382,7 +382,7 @@ apt-get -y install fail2ban;service fail2ban restart
 
 # Install BadVPN
 apt-get -y install cmake make gcc
-wget http://autoscript.kepalatupai.com/file/badvpn-1.999.127.tar.bz2
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/badvpn-1.999.127.tar.bz2
 tar xf badvpn-1.999.127.tar.bz2
 mkdir badvpn-build
 cd badvpn-build
@@ -392,16 +392,16 @@ screen badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
 cd
 
 # Install Squid
-wget http://autoscript.kepalatupai.com/file/squid.sh && bash squid.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/squid.sh && bash squid.sh
 
 # Addons
-wget http://autoscript.kepalatupai.com/addons/addons.sh && sh addons.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/addons.sh && sh addons.sh
 
 # OpenVPN
-wget http://autoscript.kepalatupai.com/file/debovpn.sh && bash debovpn.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/debovpn.sh && bash debovpn.sh
 
 # Finishing
-wget -O /etc/vpnfix.sh "http://autoscript.kepalatupai.com/file/vpnfix.sh"
+wget -O /etc/vpnfix.sh "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vpnfix.sh"
 chmod 777 /etc/vpnfix.sh
 sed -i 's/exit 0//g' /etc/rc.local
 echo "" >> /etc/rc.local
@@ -409,11 +409,11 @@ echo "bash /etc/vpnfix.sh" >> /etc/rc.local
 echo "$ screen badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &" >> /etc/rc.local
 echo "nohup ./cron.sh &" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
-wget http://autoscript.kepalatupai.com/addons/remove.sh && sh remove.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/remove.sh && sh remove.sh
 rm /root/debian.sh
 
 # Log
 clear
-wget http://autoscript.kepalatupai.com/addons/details.sh && bash details.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/details.sh && bash details.sh
 rm details.sh
 history -c

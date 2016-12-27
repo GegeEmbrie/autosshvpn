@@ -88,16 +88,16 @@ chkconfig dropbear on
 
 # Install Webserver Port 81
 yum install nginx php libapache2-mod-php php-fpm php-cli php-mysql php-mcrypt libxml-parser-perl -y
-wget -O /etc/nginx/nginx.conf "http://autoscript.kepalatupai.com/file/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/nginx.conf"
 sed -i 's/www-data/nginx/g' /etc/nginx/nginx.conf
 mkdir -p /home/vps/public_html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 rm /etc/nginx/conf.d/*
-wget -O /etc/nginx/conf.d/vps.conf "http://autoscript.kepalatupai.com/file/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vps.conf"
 sed -i 's/apache/nginx/g' /etc/php-fpm.d/www.conf
 chmod -R +rx /home/vps
 wget -O /home/vps/public_html/uptime.php "http://autoscript.kepalatupai.com/uptime.php1"
-wget -O /home/vps/public_html/index.html "http://autoscript.kepalatupai.com/addons/index.html1"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/index.html1"
 service php-fpm restart
 service nginx restart
 chkconfig php-fpm on
@@ -107,7 +107,7 @@ cd
 # Install VNSTAT
 yum install vnstat -y
 cd /home/vps/public_html/
-wget http://autoscript.kepalatupai.com/file/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -159,9 +159,9 @@ fi
 yum -y install fail2ban;service fail2ban restart
 
 # Install BadVPN
-wget -O /usr/bin/badvpn-udpgw "http://autoscript.kepalatupai.com/file/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "http://autoscript.kepalatupai.com/file/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.d/rc.local
@@ -169,17 +169,17 @@ chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # Install Squid
-wget http://autoscript.kepalatupai.com/file/squid.sh && bash squid.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/squid.sh && bash squid.sh
 
 # Addons
-wget http://autoscript.kepalatupai.com/addons/addons.sh && sh addons.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/addons.sh && sh addons.sh
 sed -i 's/1000/500/g' /usr/bin/akun
 
 # OpenVPN
-wget http://autoscript.kepalatupai.com/file/cenovpn.sh && bash cenovpn.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/cenovpn.sh && bash cenovpn.sh
 
 # Finishing
-wget -O /etc/vpnfix.sh "http://autoscript.kepalatupai.com/file/vpnfix.sh"
+wget -O /etc/vpnfix.sh "https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vpnfix.sh"
 chmod 777 /etc/vpnfix.sh
 sed -i 's/exit 0//g' /etc/rc.d/rc.local
 echo "" >> /etc/rc.d/rc.local
@@ -187,11 +187,11 @@ echo "bash /etc/vpnfix.sh" >> /etc/rc.d/rc.local
 echo "$ screen badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &" >> /etc/rc.d/rc.local
 echo "nohup ./cron.sh &" >> /etc/rc.d/rc.local
 echo "exit 0" >> /etc/rc.d/rc.local
-wget http://autoscript.kepalatupai.com/addons/remove.sh && sh remove.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/remove.sh && sh remove.sh
 rm /root/debian.sh
 
 # Log
 clear
-wget http://autoscript.kepalatupai.com/addons/details.sh && bash details.sh
+wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/addons/details.sh && bash details.sh
 rm details.sh
 history -c
